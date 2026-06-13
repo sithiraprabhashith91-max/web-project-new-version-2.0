@@ -302,3 +302,20 @@ a {
         padding: 24px;
     }
 }
+
+  .top-nav-links .top-nav-link,
+  .sidebar-link  {
+    color: #333333; 
+    text-decoration: none; 
+    padding: 8px 15px; 
+    font-weight: 500; 
+    border-radius: 5px; 
+    transition: 0.3s; 
+}
+
+.top-nav-links .top-nav-link:hover,
+.sidebar-link.active  {
+    color: #ffffff; 
+    background-color: #e64a19; 
+}
+
