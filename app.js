@@ -9,7 +9,7 @@ const VEHICLE_DATA = [
         id: 'sedan',
         name: 'Toyota Corolla (Sedan)',
         type: 'Sedan',
-        price: 6500, // Rs.
+        price: 6500, 
         capacity: 4,
         transmission: 'Automatic',
         fuel: 'Petrol',
@@ -20,7 +20,7 @@ const VEHICLE_DATA = [
         id: 'suv',
         name: 'Toyota Land Cruiser (SUV)',
         type: 'SUV',
-        price: 15000, // Rs.
+        price: 15000, 
         capacity: 6,
         transmission: 'Automatic',
         fuel: 'Diesel',
@@ -31,7 +31,7 @@ const VEHICLE_DATA = [
         id: 'van',
         name: 'Toyota HiAce (Van)',
         type: 'Van',
-        price: 11000, // Rs.
+        price: 11000, 
         capacity: 12,
         transmission: 'Manual',
         fuel: 'Diesel',
@@ -42,7 +42,7 @@ const VEHICLE_DATA = [
         id: 'luxury',
         name: 'Mercedes-Benz E-Class',
         type: 'Luxury',
-        price: 25000, // Rs.
+        price: 25000, 
         capacity: 4,
         transmission: 'Automatic',
         fuel: 'Petrol',
