@@ -319,3 +319,52 @@ a {
     background-color: #e64a19; 
 }
 
+
+.col-lg-5 a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(30, 58, 138, 0.3);
+    transition: all 0.2s ease;
+}
+
+/* Hover effect for all contact links */
+.col-lg-5 a:hover {
+    color: var(--hover-color);
+    border-bottom: 1px solid var(--hover-color);
+    background-color: rgba(30, 58, 138, 0.05);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* PHONE LINKS (detect tel:) */
+.col-lg-5 a[href^="tel"] {
+    color: var(--primary-color);
+    border-bottom: 1px dashed rgba(30, 58, 138, 0.3);
+}
+
+.col-lg-5 a[href^="tel"]:hover {
+    color: var(--hover-color);
+    background-color: rgba(30, 58, 138, 0.05);
+}
+
+/* EMAIL LINKS (detect mailto:) */
+.col-lg-5 a[href^="mailto"] {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* MAP LINK (first link in location block) */
+.col-lg-5 li:first-child a {
+    font-weight: 600;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+}
