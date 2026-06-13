@@ -368,3 +368,14 @@ footer a:hover {
     color: var(--hover-color);
     text-decoration: underline;
 }
+footer {
+    background-color: #C4E2F5;
+}
+
+footer a {
+    color: var(--primary-color);
+}
+
+footer a:hover {
+    color: var(--hover-color);
+}
