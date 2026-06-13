@@ -13,7 +13,7 @@ const VEHICLE_DATA = [
         capacity: 4,
         transmission: 'Automatic',
         fuel: 'Petrol',
-        image: 'https://images.unsplash.com/photo-1621007947382-d3c38190d55a?auto=format&fit=crop&w=600&q=80',
+        image: 'images/sedan.jpg',
         description: 'Smooth, highly fuel-efficient sedan perfectly suited for executive commutes and urban travel.'
     },
     {
@@ -24,7 +24,7 @@ const VEHICLE_DATA = [
         capacity: 6,
         transmission: 'Automatic',
         fuel: 'Diesel',
-        image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80',
+        image: 'images/landcruiser.jpg',
         description: 'Commanding power, luxury leather seats, and unmatched rough- terrain capabilities for family groups.'
     },
     {
@@ -35,7 +35,7 @@ const VEHICLE_DATA = [
         capacity: 12,
         transmission: 'Manual',
         fuel: 'Diesel',
-        image: 'https://images.unsplash.com/photo-1669837401587-f9a4cfe3126e?auto=format&fit=crop&w=600&q=80',
+        image: 'images/hiace.jpg',
         description: 'Remarkably spacious cabin ideal for tourism, airport luggage transit, and group gatherings.'
     },
     {
@@ -46,7 +46,7 @@ const VEHICLE_DATA = [
         capacity: 4,
         transmission: 'Automatic',
         fuel: 'Petrol',
-        image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=600&q=80',
+        image: 'images/benz.avif',
         description: 'Exceptional flagship styling and state-of-the-art safety setups. Rent for weddings or elite conferences.'
     }
 ];
