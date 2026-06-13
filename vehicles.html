@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Vehicles | YathraLK Renting Fleet</title>
-    <!-- Bootstrap CDN Link -->
+    <title>Our Vehicles | RideEasy Renting Fleet</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <!-- Google Font Inter -->
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Top Navigation Bar-->
-    <header class="top-navbar  border-bottom shadow-sm" style="background-color: #C4E2F5;">
+    <!--  Navigation Bar-->
+    <header class="top-navbar border-bottom shadow-sm" style="background-color: #C4E2F5;">
         <div class="d-flex align-items-center gap-3">
             <button class="sidebar-toggle-btn" id="sidebar-toggle" title="Toggle Navigation Menu">☰</button>
             <a class="fs-4 fw-bold text-dark text-decoration-none d-flex align-items-center gap-2" href="index.html">
@@ -21,7 +21,7 @@
             </a>
         </div>
         
-        <!-- Desktop Top Menu Links -->
+        <!--  Menu Links -->
         <div class="top-nav-links">
             <a class="top-nav-link" href="index.html">Home</a>
             <a class="top-nav-link active" href="vehicles.html">Our Vehicles</a>
@@ -30,21 +30,21 @@
             <a class="top-nav-link" href="contact.html">Contact</a>
         </div>
 
-        <!-- Right Side Quick Search -->
+        <!-- Top Search -->
         <div class="d-none d-md-block" style="width: 220px;">
             <input type="text" class="form-control form-control-sm global-search-input" placeholder="🔍 Quick search...">
         </div>
     </header>
 
     <div class="d-flex">
-        <!-- Persistent Sidebar on Left -->
+        <!--  Sidebar -->
         <aside class="sidebar" id="sidebar-menu">
             <div class="mb-4">
                 <h5 class="fw-bold text-dark mb-1">Renting Hub</h5>
                 <p class="text-muted text-xs">Manage your trip with ease</p>
             </div>
 
-            <!-- Left Sidebar Search Input option -->
+            <!--  Sidebar Search  -->
             <div class="sidebar-search">
                 <input type="text" class="global-search-input" placeholder="Search vehicles...">
             </div>
@@ -63,7 +63,7 @@
             </div>
         </aside>
 
-        <!-- Main Content Area -->
+        <!-- Main Content -->
         <main class="main-content flex-grow-1" id="main-workspace">
             <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 text-start">
                 <div>
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <!-- Search Filter Bar directly on the page, beautifully integrated and clean -->
+            <!-- Filter Area  -->
             <div class="card p-3 mb-4 bg-light border-light-subtle rounded-3 text-start">
                 <div class="row g-2 align-items-center">
                     <div class="col-md-5">
@@ -93,26 +93,141 @@
                 </div>
             </div>
 
-            <!-- Vehicles Grid Container -->
-            <div class="row mt-2" id="all-vehicles-container">
-                <!-- Dynamically populated by app.js -->
-            </div>
-
-            <!-- Fleet Terms Agreement Note -->
-            <div class="card p-4 bg-white mt-5 mb-4 border border-light-subtle rounded-3 text-start shadow-sm">
-                <h5 class="fw-bold mb-2 text-dark">📜 Included In Every Rental</h5>
-                <div class="row g-3 pt-2 text-xs text-muted">
+            <!-- Vehicle Cards -->
+            <section class="container py-5">
+                <div class="row g-4">
                     <div class="col-md-4">
-                        <strong class="text-dark d-block">Unlimited Kilometers</strong> Unlimited travel throughout the island.
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/car-sedan.jpg" class="card-img-top" alt="Toyota Corolla sedan">
+                            <div class="card-body">
+                                <h5 class="card-title">Toyota Corolla (Sedan)</h5>
+                                <p class="card-text">A smooth, comfortable sedan ideal for business trips and city driving.</p>
+                                <p class="fw-bold text-primary">Rs. 6,500 / day</p>
+                                <a href="booking.html" class="btn btn-primary btn-sm">Book Now </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4">
-                        <strong class="text-dark d-block">24/7 Roadside Assistance</strong> Rapid support team deployed instantly in emergencies.
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/suv.jpg" class="card-img-top" alt="SUV vehicle for rent">
+                            <div class="card-body">
+                                <h5 class="card-title">SUV - Land Cruiser</h5>
+                                <p class="card-text">Spacious and powerful, great for long trips and family travel.</p>
+                                <p class="fw-bold text-primary">Rs. 15,000 / day</p>
+                                <a href="booking.html" class="btn btn-primary btn-sm">Book Now </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4">
-                        <strong class="text-dark d-block">Comprehensive Insurance</strong> Damage protection is available on all models.
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/van.jpg" class="card-img-top" alt="Toyota HiAce van for rent">
+                            <div class="card-body">
+                                <h5 class="card-title">Toyota HiAce (Van)</h5>
+                                <p class="card-text">Perfect for group travel, airport transfers, and moving cargo.</p>
+                                <p class="fw-bold text-primary">Rs. 11,000 / day</p>
+                                <a href="booking.html" class="btn btn-primary btn-sm">Book Now </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/bike.jpg" class="card-img-top" alt="Motorbike for rent">
+                            <div class="card-body">
+                                <h5 class="card-title">Honda Motorbike</h5>
+                                <p class="card-text">Lightweight and economical, ideal for solo riders in the city.</p>
+                                <p class="fw-bold text-primary">Rs. 2,000 / day</p>
+                                <a href="booking.html" class="btn btn-primary btn-sm">Book Now </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/luxury-car.jpg" class="card-img-top" alt="Luxury car for rent">
+                            <div class="card-body">
+                                <h5 class="card-title">Mercedes E-Class (Luxury)</h5>
+                                <p class="card-text">Travel in style and comfort for weddings and special events.</p>
+                                <p class="fw-bold text-primary">Rs. 25,000 / day</p>
+                                <a href="booking.html" class="btn btn-primary btn-sm">Book Now </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/mini-bus.jpg" class="card-img-top" alt="Mini bus for rent">
+                            <div class="card-body">
+                                <h5 class="card-title">Mini Bus</h5>
+                                <p class="card-text">Great for tours, school trips and large group transportation.</p>
+                                <p class="fw-bold text-primary">Rs. 18,000 / day</p>
+                                <a href="booking.html" class="btn btn-primary btn-sm">Book NOw </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- details Table -->
+            <section class="container py-5">
+                <h2 class="section-title text-center mb-4">Vehicle Price & Capacity Table</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover text-center align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Vehicle Type</th>
+                                <th>Model</th>
+                                <th>Passenger Capacity</th>
+                                <th>Transmission</th>
+                                <th>Price / Day (Rs.)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sedan</td>
+                                <td>Toyota Corolla</td>
+                                <td>4</td>
+                                <td>Automatic</td>
+                                <td>6,500</td>
+                            </tr>
+                            <tr>
+                                <td>SUV</td>
+                                <td>Land Cruiser</td>
+                                <td>6</td>
+                                <td>Automatic</td>
+                                <td>15,000</td>
+                            </tr>
+                            <tr>
+                                <td>Van</td>
+                                <td>Toyota HiAce</td>
+                                <td>12</td>
+                                <td>Manual</td>
+                                <td>11,000</td>
+                            </tr>
+                            <tr>
+                                <td>Motorbike</td>
+                                <td>Honda CB</td>
+                                <td>2</td>
+                                <td>Manual</td>
+                                <td>2,000</td>
+                            </tr>
+                            <tr>
+                                <td>Luxury Car</td>
+                                <td>Mercedes E-Class</td>
+                                <td>4</td>
+                                <td>Automatic</td>
+                                <td>25,000</td>
+                            </tr>
+                            <tr>
+                                <td>Mini Bus</td>
+                                <td>Toyota Coaster</td>
+                                <td>25</td>
+                                <td>Manual</td>
+                                <td>18,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            
 
             <!-- Footer -->
             <footer class="pt-5 mt-5 border-top text-muted d-flex flex-wrap justify-content-between text-xs">
@@ -126,7 +241,7 @@
         </main>
     </div>
 
-    <!-- Bootstrap Bundle with Popper CDN Link -->
+    <!-- js files -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
 </body>
