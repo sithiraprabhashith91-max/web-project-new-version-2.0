@@ -216,8 +216,7 @@ a {
 }
 
 .btn-brand-outline {
-    background-color: transparent;
-    border: 1.5px solid var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.8);
     color: var(--primary-color);
     font-weight: 600;
     padding: 10px 22px;
@@ -378,4 +377,91 @@ footer a {
 
 footer a:hover {
     color: var(--hover-color);
+}
+.hero-banner {
+    background: url("images/home.png") center/cover no-repeat;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.hero-banner > div {
+    position: relative;
+}
+
+/* ==========================================================
+   MODERN RENTAL SYSTEM TABLE THEME
+   ========================================================== */
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 14px;
+    color: var(--text-dark);
+    background-color: #ffffff;
+}
+
+/* Table container look */
+.table-responsive {
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+/* Header */
+.table thead {
+    background-color: #f1f5f9;
+}
+
+.table thead th {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-dark);
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+/* Body cells */
+.table tbody td {
+    padding: 14px 12px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Row hover effect */
+.table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(30, 58, 138, 0.04);
+}
+
+/* Remove ugly Bootstrap borders */
+.table-bordered {
+    border: none;
+}
+
+/* Rating stars styling */
+.table td:nth-child(3) {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* Make last row clean */
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Shadow lift */
+.table-responsive {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
 }
