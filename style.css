@@ -17,13 +17,12 @@ body {
     padding: 0;
 }
 
-/* Base Styles */
 a {
     text-decoration: none;
     transition: all 0.2s ease;
 }
 
-/* Top Navigation Bar Header */
+
 .top-navbar {
     height: 70px;
     background-color: #ffffff;
@@ -59,7 +58,7 @@ a {
     background-color: #f1f5f9;
 }
 
-/* Sidebar Toggle Trigger */
+
 .sidebar-toggle-btn {
     background: none;
     border: none;
@@ -80,7 +79,6 @@ a {
     background-color: #e2e8f0;
 }
 
-/* Sidebar Layout */
 .sidebar {
     width: 250px;
     height: calc(100vh - 70px);
@@ -96,7 +94,6 @@ a {
     transition: transform 0.3s ease, margin-left 0.3s ease;
 }
 
-/* Toggled hidden state for Sidebar */
 .sidebar.collapsed {
     transform: translateX(-250px);
 }
@@ -114,7 +111,6 @@ a {
     margin-left: 0;
 }
 
-/* Left Sidebar Menu Items */
 .sidebar-link {
     display: flex;
     align-items: center;
@@ -138,7 +134,6 @@ a {
     font-weight: 600;
 }
 
-/* Sidebar Search Input */
 .sidebar-search {
     position: relative;
     margin-top: 5px;
@@ -173,7 +168,7 @@ a {
     opacity: 0.6;
 }
 
-/* Hero Section */
+
 .hero-banner {
     background-color: #f8fafc;
     border-radius: 16px;
@@ -182,7 +177,6 @@ a {
     border: 1px solid var(--border-light);
 }
 
-/* Colored Buttons */
 .btn-brand-primary {
     background-color: var(--primary-color);
     color: #ffffff;
@@ -229,7 +223,7 @@ a {
     color: var(--primary-color);
 }
 
-/* Cards Modification */
+
 .ride-card {
     background: #ffffff;
     border: 1px solid var(--border-light);
@@ -250,7 +244,7 @@ a {
     width: 100%;
 }
 
-/* Section Header */
+
 .section-title {
     font-size: 24px;
     font-weight: 700;
@@ -259,7 +253,7 @@ a {
     letter-spacing: -0.02em;
 }
 
-/* Form Styles */
+
 .form-control, .form-select {
     padding: 10px 14px;
     border-radius: 8px;
@@ -272,7 +266,7 @@ a {
     box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
 }
 
-/* FAQ Item */
+
 .faq-element {
     background-color: #ffffff;
     border: 1px solid var(--border-light);
@@ -281,7 +275,7 @@ a {
     margin-bottom: 12px;
 }
 
-/* Responsive Overrides */
+
 @media (max-width: 991px) {
     .top-nav-links {
         display: none;
@@ -327,7 +321,7 @@ a {
     transition: all 0.2s ease;
 }
 
-/* Hover effect for all contact links */
+
 .col-lg-5 a:hover {
     color: var(--hover-color);
     border-bottom: 1px solid var(--hover-color);
@@ -336,7 +330,7 @@ a {
     border-radius: 4px;
 }
 
-/* PHONE LINKS correction */
+
 .col-lg-5 a[href^="tel"] {
     color: var(--primary-color);
     border-bottom: 1px dashed rgba(30, 58, 138, 0.3);
@@ -347,13 +341,13 @@ a {
     background-color: rgba(30, 58, 138, 0.05);
 }
 
-/* EMAIL LINKS correction*/
+
 .col-lg-5 a[href^="mailto"] {
     color: var(--primary-color);
     font-weight: 500;
 }
 
-/* MAP LINK correction */
+
 .col-lg-5 li:first-child a {
     font-weight: 600;
 }
@@ -412,7 +406,7 @@ a {
     position: relative;
 }
 
-/*new table css*/
+
 .table {
     border-collapse: separate;
     border-spacing: 0;
@@ -421,7 +415,7 @@ a {
     background-color: #ffffff;
 }
 
-/* Table container look */
+
 .table-responsive {
     border: 1px solid var(--border-light);
     border-radius: 12px;
@@ -429,7 +423,7 @@ a {
     background: #ffffff;
 }
 
-/* Header */
+
 .table thead {
     background-color: #f1f5f9;
 }
@@ -442,14 +436,14 @@ a {
     border-bottom: 1px solid var(--border-light);
 }
 
-/* Body cells */
+
 .table tbody td {
     padding: 14px 12px;
     vertical-align: middle;
     border-bottom: 1px solid #f1f5f9;
 }
 
-/* Row hover effect */
+
 .table tbody tr {
     transition: all 0.2s ease;
 }
@@ -458,28 +452,28 @@ a {
     background-color: rgba(30, 58, 138, 0.04);
 }
 
-/* Remove ugly Bootstrap borders */
+
 .table-bordered {
     border: none;
 }
 
-/* Rating stars styling */
+
 .table td:nth-child(3) {
     font-size: 16px;
     letter-spacing: 1px;
 }
 
-/* Make last row clean */
+
 .table tbody tr:last-child td {
     border-bottom: none;
 }
 
-/* Shadow lift */
+
 .table-responsive {
     box-shadow: 0 6px 18px rgba(0,0,0,0.04);
 }
 
-/* for clock*/
+
 #live-clock-pill {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     font-size: 17.5px !important;
