@@ -1,94 +1,161 @@
-/**
- * RideEasy - Cleaner, more professional vanilla JavaScript Controller.
- * Under 260 lines of code, fully browser-compliant with no import/require statements.
- */
 
-// ==================== GLOBAL FLEET DATABASE ====================
 const VEHICLE_DATA = [
     {
         id: 'sedan',
         name: 'Toyota Corolla (Sedan)',
         type: 'Sedan',
-        price: 6500, 
+        price: 6500, //Rs.
         capacity: 4,
         transmission: 'Automatic',
         fuel: 'Petrol',
-        image: 'images/sedan.jpg',
-        description: 'Smooth, highly fuel-efficient sedan perfectly suited for executive commutes and urban travel.'
+        image: 'images/toyota_corolla_black.jpg',
+        description: 'A smooth, comfortable sedan ideal for business trips and city driving.'
     },
     {
-        id: 'suv',
-        name: 'Toyota Land Cruiser (SUV)',
+        id: 'suv',  
+        name: 'SUV - Land Cruiser',
         type: 'SUV',
-        price: 15000, 
+        price: 15000, // Rs.
         capacity: 6,
         transmission: 'Automatic',
         fuel: 'Diesel',
-        image: 'images/landcruiser.jpg',
-        description: 'Commanding power, luxury leather seats, and unmatched rough- terrain capabilities for family groups.'
+        image: 'images/toyota_land_cruiser_grey.jpg',
+        description: 'Spacious and powerful, great for long trips and family travel.'
     },
     {
         id: 'van',
-        name: 'Toyota HiAce (Van)',
+        name: 'Toyota HiAce (Luxury VIP Van)',
         type: 'Van',
-        price: 11000, 
+        price: 11000, // Rs.
         capacity: 12,
         transmission: 'Manual',
         fuel: 'Diesel',
-        image: 'images/hiace.jpg',
-        description: 'Remarkably spacious cabin ideal for tourism, airport luggage transit, and group gatherings.'
+        image: 'images/toyota_hiace_black (1).webp',
+        description: 'Premium black luxury VIP passenger van featuring chrome grille detailing and executive-grade high-roof comfort.'
+    },
+    {
+        id: 'bike',
+        name: 'Honda CB Hornet (Motorbike)',
+        type: 'Bike',
+        price: 2000, // Rs.
+        capacity: 2,
+        transmission: 'Manual',
+        fuel: 'Petrol',
+        image: 'images/honda_cb_2.jpg',
+        description: 'Sleek dark-grey street motorcycle loaded with sporty neon racing accents, ideal for fast urban commutes.'
     },
     {
         id: 'luxury',
-        name: 'Mercedes-Benz E-Class',
+        name: 'Mercedes E-Class (Luxury)',
         type: 'Luxury',
-        price: 25000, 
+        price: 25000, // Rs.
         capacity: 4,
         transmission: 'Automatic',
         fuel: 'Petrol',
-        image: 'images/benz.avif',
-        description: 'Exceptional flagship styling and state-of-the-art safety setups. Rent for weddings or elite conferences.'
+        image: 'images/mercedes_e_class_black.jpg',
+        description: 'Travel in style and comfort for weddings and special events.'
+    },
+    {
+        id: 'minibus',
+        name: 'Toyota Coaster (Mini Bus)',
+        type: 'Mini Bus',
+        price: 18000, // Rs.
+        capacity: 25,
+        transmission: 'Manual',
+        fuel: 'Diesel',
+        image: 'images/toyota_coaster_1.jpg',
+        description: 'Luxury champagne-gold passenger coaster minibus, exceptionally spacious and popular for group excursions.'
+    },
+    {
+        id: 'cab',
+        name: 'Toyota Hilux (4x4 Double Cab)',
+        type: 'Double Cab',
+        price: 12500, // Rs.
+        capacity: 5,
+        transmission: 'Manual',
+        fuel: 'Diesel',
+        image: 'images/toyota_hilux_1.jpg',
+        description: 'Rugged 4x4 double cab pickup suited for tough terrain, executive site visits, or outstation family trips.'
+    },
+    {
+        id: 'electric',
+        name: 'Tesla Model 3 (Premium Electric)',
+        type: 'Electric',
+        price: 19000, // Rs.
+        capacity: 5,
+        transmission: 'Automatic',
+        fuel: 'Electric',
+        image: 'images/tesla_model_3_1.jpg',
+        description: 'Advanced all-electric premium sedan offering Whisper-quiet drives with maximum luxury and zero-emissions tech.'
+    },
+    {
+        id: 'hatchback',
+        name: 'Suzuki Swift (Premium Hatchback)',
+        type: 'Hatchback',
+        price: 4500, // Rs.
+        capacity: 5,
+        transmission: 'Automatic',
+        fuel: 'Petrol',
+        image: 'images/suzuki_swift_1.jpg',
+        description: 'Compact, exceptionally fuel-efficient hatchback ideal for easy city commutes and nimble inner-city driving.'
+    },
+    {
+        id: 'crossover',
+        name: 'Honda Vezel (Hybrid Crossover)',
+        type: 'Crossover',
+        price: 9500, // Rs.
+        capacity: 5,
+        transmission: 'Automatic',
+        fuel: 'Hybrid',
+        image: 'images/honda_vezel_2.jpg',
+        description: 'Sophisticated hybrid crossover blending high-ground clearance versatility, smooth performance, and modern features.'
     }
 ];
 
-// ==================== INITIALIZATION ENGINE ====================
-document.addEventListener('DOMContentLoaded', () => {
+
+
+document.addEventListener('DOMContentLoaded', function ()  {
     renderVehicles();
-    setupSearchEngine();
+    setupSearchEngine() ;
     setupBookingForm();
     onVehicleSelectChange();
     setupSidebarToggle();
+    setupLiveClock();
 
-    // Navigation highlighting based on active path
-    const activePath = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.sidebar-link, .top-nav-link').forEach(link => {
-        if (link.getAttribute('href') === activePath) {
-            link.classList.add('active');
+    let activePath = window.location.pathname.split('/').pop();
+    if (activePath === "") {
+        activePath = "index.html";
+    }
+
+    let navLinks = document.querySelectorAll('.sidebar-link, .top-nav-link');
+    for (let i = 0; i < navLinks.length; i++) {
+        if (navLinks[i].getAttribute('href') === activePath) {
+            navLinks[i].classList.add('active');
         } else {
-            link.classList.remove('active');
+            navLinks[i].classList.remove('active');
         }
-    });
+    }
 });
 
-// ==================== SIDEBAR HAMBURGER INTERACTION ====================
 function setupSidebarToggle() {
     const toggleBtn = document.getElementById('sidebar-toggle');
     const sidebar = document.getElementById('sidebar-menu');
     const mainContent = document.getElementById('main-workspace');
 
     if (toggleBtn && sidebar) {
-        toggleBtn.addEventListener('click', (e) => {
+        toggleBtn.addEventListener('click', function (e) {
             e.stopPropagation();
             if (window.innerWidth <= 991) {
                 sidebar.classList.toggle('show-mobile');
             } else {
                 sidebar.classList.toggle('collapsed');
-                if (mainContent) mainContent.classList.toggle('expanded');
+                if (mainContent) {
+                    mainContent.classList.toggle('expanded');
+                }
             }
         });
 
-        // Close mobile drawer when clicking container outside
-        document.addEventListener('click', (e) => {
+        document.addEventListener('click', function (e) {
             if (window.innerWidth <= 991 && !sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
                 sidebar.classList.remove('show-mobile');
             }
@@ -96,7 +163,7 @@ function setupSidebarToggle() {
     }
 }
 
-// ==================== RENDERING VEHICLE CATALOGS ====================
+       
 function renderVehicles(filteredData = VEHICLE_DATA) {
     const featuredGrid = document.getElementById('featured-cars-container');
     if (featuredGrid) {
@@ -129,7 +196,7 @@ function createVehicleCard(car, isFeatured) {
     colObj.className = isFeatured ? 'col-md-4 mb-4' : 'col-md-6 col-lg-4 mb-4';
     colObj.innerHTML = `
         <div class="ride-card card h-100">
-            <img src="${car.image}" class="card-img-top" alt="${car.name}">
+            <img src="${car.image}" class="card-img-top" alt="${car.name}" referrerPolicy="no-referrer">
             <div class="card-body d-flex flex-column justify-content-between p-4">
                 <div>
                     <div class="d-flex justify-content-between align-items-center mb-2">
@@ -140,8 +207,8 @@ function createVehicleCard(car, isFeatured) {
                     <p class="text-muted text-xs line-clamp-3 mb-3">${car.description}</p>
                 </div>
                 <div class="border-top pt-3 d-flex justify-content-between align-items-center text-xs text-muted">
-                    <span>👥 ${car.capacity} Seats</span>
-                    <span>⚙️ ${car.transmission}</span>
+                    <span> ${car.capacity} Seats</span>
+                    <span> ${car.transmission}</span>
                     <a href="booking.html?id=${car.id}" class="btn btn-brand-primary btn-sm px-3">Book Now</a>
                 </div>
             </div>
@@ -150,7 +217,7 @@ function createVehicleCard(car, isFeatured) {
     return colObj;
 }
 
-// ==================== LIVE SEARCH ENGINE ====================
+
 function setupSearchEngine() {
     const searchInputs = document.querySelectorAll('.global-search-input');
     
@@ -193,10 +260,12 @@ function filterGlobalWorkspace(query) {
 
 function resetSearchFilters() {
     document.querySelectorAll('.global-search-input').forEach(input => input.value = '');
+    const filterSelect = document.getElementById('vehicle-type-filter');
+    if (filterSelect) filterSelect.value = '';
     filterGlobalWorkspace('');
 }
 
-// ==================== LIVE BILLING Ledger ====================
+
 function setupBookingForm() {
     const form = document.getElementById('bookingForm');
     if (!form) return;
@@ -211,34 +280,48 @@ function setupBookingForm() {
     }
 
     const inputsToTrack = ['vehicleType', 'pickupDate', 'returnDate', 'location', 'driverYes', 'driverNo'];
-    inputsToTrack.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.addEventListener('change', onVehicleSelectChange);
-    });
+    
+    for (let j = 0; j < inputsToTrack.length; j++) {
+        let el = document.getElementById(inputsToTrack[j]);
+        if (el) {
+            el.addEventListener('change', onVehicleSelectChange);
+        }
+    }
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); 
         let isValid = true;
-        const required = ['fullName', 'email', 'phone', 'vehicleType', 'pickupDate', 'returnDate', 'location'];
+        
+        const required = ['fullName'  , 'email', 'phone','vehicleType', 'pickupDate', 'returnDate', 'location'];
 
-        required.forEach(id => {
-            const inp = document.getElementById(id);
+        for (let k = 0; k < required.length; k++) {
+            let fieldId = required[k];
+            let inp = document.getElementById(fieldId);
             if (inp) {
                 inp.classList.remove('is-invalid');
-                if (!inp.value) {
+                if (inp.value.trim() === "") {
                     inp.classList.add('is-invalid');
                     isValid = false;
                 }
             }
-        });
+        }
 
-        if (isValid) {
+        let emailField = document.getElementById('email');
+        if (emailField && emailField.value !== "") {
+            if (emailField.value.indexOf('@') === -1) {
+                emailField.classList.add('is-invalid');
+                isValid = false;
+            }
+        }
+
+        if (isValid === true) {
             const confMsg = document.getElementById('confirmationMsg');
             const submitBtn = document.getElementById('submitBtn');
             if (confMsg && submitBtn) {
                 confMsg.classList.remove('d-none');
                 submitBtn.disabled = true;
-                setTimeout(() => {
+                
+                setTimeout(function () {
                     form.reset();
                     confMsg.classList.add('d-none');
                     submitBtn.disabled = false;
@@ -264,7 +347,13 @@ function onVehicleSelectChange() {
     if (!selectObj || !billingSection) return;
 
     const selectedId = selectObj.value;
-    const car = VEHICLE_DATA.find(c => c.id === selectedId);
+    let car = null;
+    for (let i = 0; i < VEHICLE_DATA.length; i++) {
+        if (VEHICLE_DATA[i].id === selectedId) {
+            car = VEHICLE_DATA[i];
+            break;
+        }
+    }
 
     if (!car) {
         billingSection.classList.add('d-none');
@@ -276,20 +365,45 @@ function onVehicleSelectChange() {
     document.getElementById('billingPlaceholderMsg')?.classList.add('d-none');
 
     let days = 1;
-    if (pickupObj.value && returnObj.value) {
-        const start = new Date(pickupObj.value);
-        const end = new Date(returnObj.value);
-        if (end > start) {
-            days = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
-        }
+if (pickupObj.value !== "" && returnObj.value !== "") {
+    let start = new Date(pickupObj.value);
+    let end = new Date(returnObj.value);
+    if (end > start) {
+        let diffInMs = end.getTime() - start.getTime(); // Lecture 04 Date Object න්‍යාය
+        let msInDay = 1000 * 60 * 60 * 24;
+        days = Math.ceil(diffInMs / msInDay);
+    }
+}
+
+let driverRequired = false;
+if (driverYes && driverYes.checked) {
+    driverRequired = true;
+}
+
+let driverFee = 0;
+if (driverRequired === true) {
+    driverFee = 3500 * days;
+}
+
+let basePrice = car.price * days;
+let totalPrice = basePrice + driverFee;
+
+    baseRateEl.textContent = "Rs. "+ car.price.toLocaleString() + " / day";
+    durationEl.textContent = days +" Day(s) (Rs. " + basePrice.toLocaleString() + ")";
+    driverChargeEl.textContent = "Rs. "+driverFee.toLocaleString();
+    totalEl.textContent = "Rs. " +   totalPrice.toLocaleString();
+}
+
+
+function setupLiveClock() {
+    const clockEl = document.getElementById('nav-clock');
+    if (!clockEl) return;
+
+    function updateClock() {
+        const now = new Date(); 
+        clockEl.textContent = now.toDateString() + " - " + now.toLocaleTimeString();
     }
 
-    const driverRequired = driverYes && driverYes.checked;
-    const driverFee = driverRequired ? 2000 * days : 0;
-    const basePrice = car.price * days;
-
-    baseRateEl.textContent = `Rs. ${car.price.toLocaleString()} / day`;
-    durationEl.textContent = `${days} Day(s) (Rs. ${basePrice.toLocaleString()})`;
-    driverChargeEl.textContent = `Rs. ${driverFee.toLocaleString()}`;
-    totalEl.textContent = `Rs. ${(basePrice + driverFee).toLocaleString()}`;
+    updateClock();
+    setInterval(updateClock, 1000);
 }
