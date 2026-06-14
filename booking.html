@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <header class="top-navbar  border-bottom shadow-sm" style="background-color: #C4E2F5;">
+    <header class="top-navbar  border-bottom shadow-sm" style="background-color:#C4E2F5;">
         <div class="d-flex align-items-center gap-3">
             <button class="sidebar-toggle-btn" id="sidebar-toggle" title="Toggle Navigation Menu">☰</button>
             <a class="fs-4 fw-bold text-dark text-decoration-none d-flex align-items-center gap-2" href="index.html">
@@ -96,10 +96,12 @@
                                     <label for="vehicleType" class="form-label text-xs uppercase font-semibold">Vehicle Model</label>
                                     <select class="form-select" id="vehicleType">
                                         <option value="">-- Choose Model --</option>
-                                        <option value="sedan">Toyota Corolla (Sedan)</option>
-                                        <option value="suv">Toyota Land Cruiser (SUV)</option>
+                                        <option value="sedan">Toyota Corolla (Sedan) </option>
+                                        <option value="suv">Toyota Land cruiser (SUV)</option>
                                         <option value="van">Toyota HiAce (Van)</option>
+                                        <option value="Motorbike">Honda CB (Motorbike)</option>
                                         <option value="luxury">Mercedes-Benz E-Class</option>
+                                        <option value="Mini Bus">Toyota Coaster (Mini Bus)</option>
                                     </select>
                                     <div class="invalid-feedback text-xs mt-1" id="errVehicle"></div>
                                 </div>
@@ -115,21 +117,26 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="location" class="form-label text-xs uppercase font-semibold">Pick-up Location</label>
-                                    <select class="form-select" id="location">
+                                    <select class="form-select" id="location" >
                                         <option value="">-- Choose Location --</option>
                                         <option value="Colombo">Colombo Central Branch</option>
-                                        <option value="Kandy">Kandy District Hub</option>
+                                        <option value="Kandy">Kandy District Hub </option>
                                         <option value="Galle">Galle Coastal Office</option>
-                                        <option value="Jaffna">Jaffna Northern Branch</option>
+                                        <option value="Jaffna">Jaffna Northern Branch  </option>
+                                        <option value="Negombo">Negombo Coastal Branch</option>
+                                        <option value="Kurunegala">Kurunegala Town Hub</option>
+                                        <option value="Anuradhapura">Anuradhapura Sacred City Office</option>
+                                        <option value="Matara">Matara Southern Branch</option>
+                                         <option value="Badulla">Badulla Hill Country Branch  </option>                                    
                                     </select>
                                     <div class="invalid-feedback text-xs mt-1" id="errLocation"></div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label text-xs uppercase font-semibold d-block">Driver Required?</label>
-                                    <div class="mt-2">
+                                    <div class=" mt-2">
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="driver" id="driverYes" value="Yes">
-                                            <label class="form-check-label text-sm" for="driverYes">Yes (+Rs. 2,000/day)</label>
+                                            <label class="form-check-label text-sm" for="driverYes">Yes (+Rs. 3,500/day)</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="driver" id="driverNo" value="No" checked>

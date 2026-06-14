@@ -285,7 +285,7 @@ function onVehicleSelectChange() {
     }
 
     const driverRequired = driverYes && driverYes.checked;
-    const driverFee = driverRequired ? 2000 * days : 0;
+    const driverFee = driverRequired ? 35000 * days : 0;
     const basePrice = car.price * days;
 
     baseRateEl.textContent = `Rs. ${car.price.toLocaleString()} / day`;
