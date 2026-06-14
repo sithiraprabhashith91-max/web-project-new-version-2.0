@@ -1,11 +1,9 @@
-/* ==========================================================
-   RideEasy - Professional & Clean Car Rental CSS
-   ========================================================== */
+
 
 :root {
-    --primary-color: #1e3a8a; /* Professional Royal Blue */
+    --primary-color: #1e3a8a; 
     --hover-color: #1d4ed8;
-    --accent-color: #10b981;  /* Emerald */
+    --accent-color: #10b981;  
     --bg-light: #f8fafc;
     --text-dark: #0f172a;
     --border-light: #e2e8f0;
@@ -59,7 +57,7 @@ a {
     background-color: #f1f5f9;
 }
 
-/* Sidebar Toggle Trigger (Three Lines) */
+/* Sidebar Toggle Trigger */
 .sidebar-toggle-btn {
     background: none;
     border: none;
