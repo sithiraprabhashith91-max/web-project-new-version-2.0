@@ -80,13 +80,18 @@
             
                 <div class="col-lg-7">
                     <div class="card p-4 border border-light-subtle rounded-3 shadow-sm booking-card-bg ">
-                        <h4 class ="fw-bold mb-4 text-dark border-bottom pb-2"> Client Details</h4>
+                        <h4 class ="fw-bold mb-4 text-dark border-bottom pb-2 text-center"><u> Client Details</u></h4>
                         <form id="bookingForm" novalidate>
     <div class="row g-3">
         <div class="col-md-6">
             <label for="fullName" class="form-label small fw-bold text-uppercase">Full Name</label>
             <input type= "text" class="form-control" id="fullName" placeholder="Enter full name">
             <div class="invalid-feedback" id="errName"></div>
+        </div>
+        <div class="col-md-6">
+            <label for="nicNumber" class="form-label small fw-bold text-uppercase">NIC Number</label>
+            <input type= "text" class="form-control" id="nicNumber" placeholder="Enter NIC number">
+            <div class="invalid-feedback" id="errNic"></div>
         </div>
         <div class="col-md-6">
             <label for="email" class="form-label small fw-bold text-uppercase">Email Address</label>
@@ -115,17 +120,7 @@
             </select>
             <div class="invalid-feedback" id="errVehicle"></div>
         </div>
-        <div class="col-md-6">
-            <label for="pickupDate" class="form-label small fw-bold text-uppercase">Pick-up Date  </label>
-            <input type="date" class="form-control" id="pickupDate" value="2026-06-14">
-            <div class="invalid-feedback" id="errPickup"></div>
-        </div>
-        <div class="col-md-6">
-            <label for="returnDate" class="form-label small fw-bold text-uppercase"> Return Date</label>
-            <input type  ="date" class="form-control" id="returnDate" value="2026-06-17">
-            <div class="invalid-feedback" id="errReturn"></div>
-        </div>
-        <div class="col-md-6">
+              <div class="col-md-6">
             <label for="location" class="form-label small fw-bold text-uppercase">Pick-up Location</label>
             <select class ="form-select" id="location">
                 <option value="">-- Choose Location --</option>
@@ -140,6 +135,16 @@
                 <option value="Badulla">Badulla Hill Country Branch</option>
             </select>
             <div class="invalid-feedback" id="errLocation"></div>
+        </div>
+        <div class="col-md-6">
+            <label for="pickupDate" class="form-label small fw-bold text-uppercase">Pick-up Date  </label>
+            <input type="date" class="form-control" id="pickupDate" value="2026-06-14">
+            <div class="invalid-feedback" id="errPickup"></div>
+        </div>
+        <div class="col-md-6">
+            <label for="returnDate" class="form-label small fw-bold text-uppercase"> Return Date</label>
+            <input type  ="date" class="form-control" id="returnDate" value="2026-06-17">
+            <div class="invalid-feedback" id="errReturn"></div>
         </div>
         <div class="col-md-6">
             <label class="form-label small fw-bold text-uppercase d-block">Driver Required?</label>
@@ -174,7 +179,7 @@
            
                 <div class="col-lg-5">
                     <div class= "card p-4 border border-light-subtle rounded-3 bg-white sticky-lg-top shadow-sm" style="top: 94px;">
-                        <h4 class="fw-bold mb-4 text-dark border-bottom pb-2">Billing Summary</h4>
+                        <h4 class="fw-bold mb-4 text-dark border-bottom pb-2 text-center">Billing Summary</h4>
                         
                         <div id ="billingCalculationArea" class="d-none">
                             <div class="d-flex justify-content-between py-2 border-bottom text-sm text-muted">
