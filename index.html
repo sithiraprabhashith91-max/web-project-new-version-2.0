@@ -15,7 +15,7 @@
         <div class="d-flex align-items-center gap-3 ">
             <button class="sidebar-toggle-btn" id="sidebar-toggle" title="Toggle Navigation Menu">☰</button>
             <a class="fs-4 fw-bold text-dark text-decoration-none d-flex align-items-center gap-2" href="index.html">
-                <span></span> <span class="fw-bold tracking-tight">YathraLK</span>
+                <span class="fw-bold tracking-tight">YathraLK</span>
             </a>
         </div>
         
@@ -28,9 +28,14 @@
             <a class="top-nav-link" href="contact.html">Contact</a>
         </div>
 
-        <!-- Right Side Quick Search -->
-        <div class="d-none d-md-block" style="width: 220px;">
-            <input type="text" class="form-control form-control-sm global-search-input" placeholder=" Quick search...">
+        <!-- Right Side Quick Info & Search -->
+        <div class="d-flex align-items-center gap-3">
+            <div id="live-clock-pill" class="d-none d-lg-flex">
+                <span id="nav-clock">Loading current time...</span>
+            </div>
+            <div class="d-none d-md-block" style="width: 180px;">
+                <input type="text" class="form-control form-control-sm global-search-input" placeholder=" Quick search...">
+            </div>
         </div>
     </header>
 
@@ -55,19 +60,17 @@
                 <a class="sidebar-link" href="contact.html"> Customer Care</a>
             </nav>
 
-            <div class="mt-auto pt-4 border-top">
-                <p class="text-muted text-[11px] mb-0">&copy; 2026 RideEasy Inc.</p>
-                <p class="text-muted text-[10px]">Reliable Professional Rides</p>
+            <div class="sidebar-footer mt-auto pt-4 border-top">
+                <p class="mb-0">&copy; 2026 YathraLK Inc.</p>
             </div>
         </aside>
 
         <!-- Main Content Area -->
         <main class="main-content flex-grow-1" id="main-workspace">
             <!-- Professional Clean Hero Banner -->
-            <section class="hero-banner text-start bg-white border rounded-4 p-5 mb-5 shadow-sm">
+            <section class="hero-banner text-start border rounded-4 p-5 mb-5 shadow-sm">
                 <div class="max-w-xl">
-                    <span class="d-inline-block mb-3 font-monospace fw-bold text-black" style="font-size: 15px; letter-spacing: 0.05em; text-transform: uppercase;">Premium Vehicle Rentals</span>
-                    <h1 class="display-5 fw-bold text-dark mb-3">Book Your Ride,<br>Rent With Absolute Confidence</h1>
+                    <h1 class="display-5 fw-bold text-white mb-3" style="text-shadow: 0 2px 4px rgba(0,0,0,0.6);">Book Your Ride,<br>Rent With Absolute Confidence</h1>
                     <div class="d-flex gap-3">
                         <a href="booking.html" class="btn btn-brand-primary btn-lg">Book A Ride Now</a>
                         <a href="vehicles.html" class="btn btn-brand-outline btn-lg">Explore Fleet</a>
@@ -95,7 +98,7 @@
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-6">
                         <span class="text-primary fw-bold text-xs uppercase tracking-wide">Standard of Excellence</span>
-                        <h3 class="fw-bold text-primary mt-1 mb-3">What Makes RideEasy Different?</h3>
+                        <h3 class="fw-bold text-primary mt-1 mb-3">What Makes YathraLK Different?</h3>
                         <p class="text-muted text-sm leading-relaxed mb-4">We are committed to delivering seamless vehicle renting solutions with a flat white, professional interface. No unsolicited telemetry tracking or visual slop—just quick client fulfillment.</p>
                         
                         <div class="row g-3">
@@ -109,18 +112,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 text-center">
-                        <div class="bg-white p-4 rounded-3 border border-secondary-subtle shadow-sm">
-                            <h5 class="fw-bold mb-3 text-dark">Need Custom Assistance?</h5>
-                            <p class="text-muted text-xs mb-4">We are active 24 hours a day to facilitate custom branch requests, corporate leases, or transfers.</p>
-                            <a href="contact.html" class="btn btn-brand-primary py-2.5 w-100">Contact Booking Agent</a>
+                    <div class="col-lg-6">
+                        <div class="p-4 p-md-5 bg-white rounded-3 border border-secondary-subtle shadow-sm h-100 d-flex flex-column justify-content-center">
+                            <div>
+                                <h4 class="fw-bold text-dark mb-3">Custom Destination Inquiries</h4>
+                                <p class="text-muted text-sm leading-relaxed mb-4">We facilitate secure airport transits, premium wedding fleets, corporate leases, and custom island-wide transfers on-demand.</p>
+                                <a href="contact.html" class="btn btn-brand-primary btn-md py-2 px-4 shadow-sm fw-semibold">Contact Booking Agent</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Footer -->
-            <footer class="pt-5 mt-5 border-top text-muted d-flex flex-wrap justify-content-between text-xs" >
+            <footer class="main-footer pt-5 mt-5 border-top text-muted d-flex flex-wrap justify-content-between text-xs" >
                 <p>&copy; 2026 YathraLK Car Rental. All rights reserved.</p>
                 <div class="d-flex gap-3">
                     <a href="services.html" class=" text-decoration-none">Services</a>

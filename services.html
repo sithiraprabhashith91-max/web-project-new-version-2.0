@@ -17,22 +17,27 @@
         <div class="d-flex align-items-center gap-3 ">
             <button class="sidebar-toggle-btn" id="sidebar-toggle" title="Toggle Navigation Menu">☰</button>
             <a class="fs-4 fw-bold text-dark text-decoration-none d-flex align-items-center gap-2" href="index.html">
-                <span></span> <span class="fw-bold tracking-tight">YathraLK</span>
+                <span class="fw-bold tracking-tight">YathraLK</span>
             </a>
         </div>
         
         <!-- Desktop Top Menu Links -->
         <div class="top-nav-links">
-            <a class="top-nav-link active btn-success" href="index.html">Home</a>
+            <a class="top-nav-link" href="index.html">Home</a>
             <a class="top-nav-link" href="vehicles.html">Our Vehicles</a>
             <a class="top-nav-link" href="booking.html">Book Now</a>
-            <a class="top-nav-link" href="services.html">Services</a>
+            <a class="top-nav-link active" href="services.html">Services</a>
             <a class="top-nav-link" href="contact.html">Contact</a>
         </div>
 
-        <!-- Right Side Quick Search -->
-        <div class="d-none d-md-block" style="width: 220px;">
-            <input type="text" class="form-control form-control-sm global-search-input" placeholder=" Quick search...">
+        <!-- Right Side Quick Info & Search -->
+        <div class="d-flex align-items-center gap-3">
+            <div id="live-clock-pill" class="d-none d-lg-flex">
+                <span id="nav-clock">Loading current time...</span>
+            </div>
+            <div class="d-none d-md-block" style="width: 180px;">
+                <input type="text" class="form-control form-control-sm global-search-input" placeholder=" Quick search...">
+            </div>
         </div>
     </header>
 
@@ -57,9 +62,8 @@
                 <a class="sidebar-link" href="contact.html"> Customer Care</a>
             </nav>
 
-            <div class="mt-auto pt-4 border-top">
-                <p class="text-muted text-[11px] mb-0">&copy; 2026 YathraLK Inc.</p>
-                <p class="text-muted text-[10px]">Reliable Professional Rides</p>
+            <div class="sidebar-footer mt-auto pt-4 border-top">
+                <p class="mb-0">&copy; 2026 YathraLK Inc.</p>
             </div>
         </aside>
 
@@ -216,7 +220,7 @@
             </section>
 
             <!-- Footer -->
-            <footer class="pt-5 mt-5 border-top text-muted d-flex flex-wrap justify-content-between text-xs">
+            <footer class="main-footer pt-5 mt-5 border-top text-muted d-flex flex-wrap justify-content-between text-xs">
                 <p>&copy; 2026 YathraLK Car Rental. All rights reserved.</p>
                 <div class="d-flex gap-3">
                     <a href="services.html" class=" text-decoration-none">Services</a>
