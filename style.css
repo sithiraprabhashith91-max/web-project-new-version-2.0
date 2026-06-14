@@ -158,7 +158,7 @@ a {
 }
 
 .sidebar-search::before {
-    content: "🔍";
+   
     position: absolute;
     left: 14px;
     top: 50%;
