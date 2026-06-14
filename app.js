@@ -4,7 +4,7 @@ const VEHICLE_DATA = [
         id: 'sedan',
         name: 'Toyota Corolla (Sedan)',
         type: 'Sedan',
-        price: 6500, //Rs.
+        price: 6500, 
         capacity: 4,
         transmission: 'Automatic',
         fuel: 'Petrol',
@@ -15,7 +15,7 @@ const VEHICLE_DATA = [
         id: 'suv',  
         name: 'SUV - Land Cruiser',
         type: 'SUV',
-        price: 15000, // Rs.
+        price: 15000, 
         capacity: 6,
         transmission: 'Automatic',
         fuel: 'Diesel',
@@ -26,7 +26,7 @@ const VEHICLE_DATA = [
         id: 'van',
         name: 'Toyota HiAce (Luxury VIP Van)',
         type: 'Van',
-        price: 11000, // Rs.
+        price: 11000, 
         capacity: 12,
         transmission: 'Manual',
         fuel: 'Diesel',
@@ -37,7 +37,7 @@ const VEHICLE_DATA = [
         id: 'bike',
         name: 'Honda CB Hornet (Motorbike)',
         type: 'Bike',
-        price: 2000, // Rs.
+        price: 2000, 
         capacity: 2,
         transmission: 'Manual',
         fuel: 'Petrol',
@@ -48,7 +48,7 @@ const VEHICLE_DATA = [
         id: 'luxury',
         name: 'Mercedes E-Class (Luxury)',
         type: 'Luxury',
-        price: 25000, // Rs.
+        price: 25000, 
         capacity: 4,
         transmission: 'Automatic',
         fuel: 'Petrol',
@@ -59,7 +59,7 @@ const VEHICLE_DATA = [
         id: 'minibus',
         name: 'Toyota Coaster (Mini Bus)',
         type: 'Mini Bus',
-        price: 18000, // Rs.
+        price: 18000, 
         capacity: 25,
         transmission: 'Manual',
         fuel: 'Diesel',
@@ -70,7 +70,7 @@ const VEHICLE_DATA = [
         id: 'cab',
         name: 'Toyota Hilux (4x4 Double Cab)',
         type: 'Double Cab',
-        price: 12500, // Rs.
+        price: 12500,
         capacity: 5,
         transmission: 'Manual',
         fuel: 'Diesel',
@@ -81,7 +81,7 @@ const VEHICLE_DATA = [
         id: 'electric',
         name: 'Tesla Model 3 (Premium Electric)',
         type: 'Electric',
-        price: 19000, // Rs.
+        price: 19000,
         capacity: 5,
         transmission: 'Automatic',
         fuel: 'Electric',
@@ -92,7 +92,7 @@ const VEHICLE_DATA = [
         id: 'hatchback',
         name: 'Suzuki Swift (Premium Hatchback)',
         type: 'Hatchback',
-        price: 4500, // Rs.
+        price: 4500, 
         capacity: 5,
         transmission: 'Automatic',
         fuel: 'Petrol',
@@ -103,7 +103,7 @@ const VEHICLE_DATA = [
         id: 'crossover',
         name: 'Honda Vezel (Hybrid Crossover)',
         type: 'Crossover',
-        price: 9500, // Rs.
+        price: 9500, 
         capacity: 5,
         transmission: 'Automatic',
         fuel: 'Hybrid',
@@ -369,7 +369,7 @@ if (pickupObj.value !== "" && returnObj.value !== "") {
     let start = new Date(pickupObj.value);
     let end = new Date(returnObj.value);
     if (end > start) {
-        let diffInMs = end.getTime() - start.getTime(); // Lecture 04 Date Object න්‍යාය
+        let diffInMs = end.getTime() - start.getTime(); // Date Object added
         let msInDay = 1000 * 60 * 60 * 24;
         days = Math.ceil(diffInMs / msInDay);
     }

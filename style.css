@@ -336,7 +336,7 @@ a {
     border-radius: 4px;
 }
 
-/* PHONE LINKS (detect tel:) */
+/* PHONE LINKS correction */
 .col-lg-5 a[href^="tel"] {
     color: var(--primary-color);
     border-bottom: 1px dashed rgba(30, 58, 138, 0.3);
@@ -347,13 +347,13 @@ a {
     background-color: rgba(30, 58, 138, 0.05);
 }
 
-/* EMAIL LINKS (detect mailto:) */
+/* EMAIL LINKS correction*/
 .col-lg-5 a[href^="mailto"] {
     color: var(--primary-color);
     font-weight: 500;
 }
 
-/* MAP LINK (first link in location block) */
+/* MAP LINK correction */
 .col-lg-5 li:first-child a {
     font-weight: 600;
 }
@@ -412,10 +412,7 @@ a {
     position: relative;
 }
 
-/* ==========================================================
-   MODERN RENTAL SYSTEM TABLE THEME
-   ========================================================== */
-
+/*new table css*/
 .table {
     border-collapse: separate;
     border-spacing: 0;
@@ -482,7 +479,7 @@ a {
     box-shadow: 0 6px 18px rgba(0,0,0,0.04);
 }
 
-/* Premium Human-Designed live clock-pill style */
+/* for clock*/
 #live-clock-pill {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     font-size: 17.5px !important;
